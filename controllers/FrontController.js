@@ -1,4 +1,4 @@
-const userModel = require("../models/user")
+const userModel = require("../models/user");
 class FrontController {
   static home = async (req, res) => {
     try {
@@ -38,7 +38,14 @@ class FrontController {
   //userinsert
   static userinsert = async (req, res) => {
     try {
-      console.log(req.body);
+      // console.log(req.body);
+      const { name, email, password, confirmPassword } = req.body;
+      const data = await userModel.create({
+        name,
+        email,
+        password,
+      });
+      res.redirect("/");
     } catch (error) {
       console.log(error);
     }
