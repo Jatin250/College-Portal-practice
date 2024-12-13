@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const local_url = "mongodb://localhost:27017/folderCOLEGE";
+const local_url = "mongodb://localhost:27017/collegePortalPractice";
 
 const connectDb = () => {
   return mongoose
@@ -12,4 +12,4 @@ const connectDb = () => {
     });
 };
 
-module.exports = connectDb
+module.exports = connectDb;
